@@ -20,9 +20,9 @@ const Touchable = (props: TouchableProps) =>
       {props.children}
     </TouchableOpacity>
   ) : (
-    <TouchableNativeFeedback onPress={props.onPress}>
-      <View style={props.style}>{props.children}</View>
-    </TouchableNativeFeedback>
-  );
+      // <TouchableOpacity onPress={props.onPress}>
+      <View style={props.style} onPress={props.onPress}>{props.children}</View>
+      // </TouchableOpacity>
+    );
 
 export default Touchable;

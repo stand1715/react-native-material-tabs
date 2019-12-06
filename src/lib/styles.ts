@@ -13,6 +13,7 @@ const Bar = styled.View`
 
 const TabTrack = styled.View`
   flex-direction: row;
+  elevation: 5;
   height: ${(props: Pick<BarProps, 'barHeight'>) =>
     props.barHeight - constants.indicatorHeight};
 `;

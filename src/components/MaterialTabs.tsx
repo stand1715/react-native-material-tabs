@@ -72,7 +72,7 @@ const MaterialTabs: React.FC<Props> = ({
 
   useEffect(() => {
     const getAnimateValues = () => {
-      if (selectedIndex > items.length - 1) selectedIndex = 0;
+
       const scrollValue = !scrollable ? tabWidth : barWidth * 0.4;
       const indicator = I18nManager.isRTL
         ? -selectedIndex * scrollValue
@@ -150,7 +150,6 @@ const MaterialTabs: React.FC<Props> = ({
             color={indicatorColor}
             value={indicatorPosition}
             tabWidth={!scrollable ? tabWidth : barWidth * 0.4}
-
           />
           <TabTrack barHeight={barHeight}>
             {items.map((item, idx) => (

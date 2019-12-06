@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleProp, TextStyle, ScrollViewProps } from 'react-native';
+import { StyleProp, TextStyle, ViewStyle, ScrollViewProps } from 'react-native';
 
 interface TabsProps extends Pick<ScrollViewProps, 'keyboardShouldPersistTaps'> {
   /**
@@ -38,7 +38,7 @@ interface TabsProps extends Pick<ScrollViewProps, 'keyboardShouldPersistTaps'> {
   activeTextColor?: string;
 
 
-  indicatorStyle?: StyleProp<any>;
+  indicatorStyle?: StyleProp<ViewStyle>;
   /**
    * Color of the indicator
    *

@@ -25,7 +25,7 @@ interface Props extends Pick<ScrollViewProps, 'keyboardShouldPersistTaps'> {
   indicatorColor: string;
   inactiveTextColor: string;
   scrollable: boolean;
-  indicatorStyle: StyleProp<any>;
+  indicatorStyle: StyleProp<ViewStyle>;
   textStyle: StyleProp<TextStyle>;
   activeTextStyle: StyleProp<TextStyle>;
   items: ContentType[];

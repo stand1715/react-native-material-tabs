@@ -4,6 +4,7 @@ import {
   View,
   TouchableOpacity,
   TouchableNativeFeedback,
+  TouchableWithoutFeedback,
   StyleProp,
   ViewStyle,
 } from 'react-native';
@@ -20,9 +21,9 @@ const Touchable = (props: TouchableProps) =>
       {props.children}
     </TouchableOpacity>
   ) : (
-      // <TouchableOpacity onPress={props.onPress}>
-      <View style={props.style} onPress={props.onPress}>{props.children}</View>
-      // </TouchableOpacity>
+      <TouchableWithoutFeedback onPress={props.onPress}>
+        <View style={props.style} onPress={props.onPress}>{props.children}</View>
+      </TouchableWithoutFeedback>
     );
 
 export default Touchable;

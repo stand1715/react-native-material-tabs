@@ -30,9 +30,7 @@ const Indicator = ({ style = {}, ...props }: IndicatorProps) => (
     color={props.color}
     style={{ transform: [{ translateX: props.value }], ...style }}
     tabWidth={props.tabWidth}
-  >
-    <Text>on99</Text>
-  </Bar>
+  />
 );
 
 export default Indicator;

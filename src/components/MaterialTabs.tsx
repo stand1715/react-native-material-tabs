@@ -145,6 +145,12 @@ const MaterialTabs: React.FC<Props> = ({
           keyboardShouldPersistTaps={keyboardShouldPersistTaps}
           scrollEnabled={scrollable}
         >
+          <Indicator
+            style={indicatorStyle}
+            color={indicatorColor}
+            value={indicatorPosition}
+            tabWidth={!scrollable ? tabWidth : barWidth * 0.4}
+          />
           <TabTrack barHeight={barHeight}>
             {items.map((item, idx) => (
               <Tab
@@ -164,12 +170,6 @@ const MaterialTabs: React.FC<Props> = ({
             ))}
           </TabTrack>
 
-          <Indicator
-            style={indicatorStyle}
-            color={indicatorColor}
-            value={indicatorPosition}
-            tabWidth={!scrollable ? tabWidth : barWidth * 0.4}
-          />
         </ScrollView>
       </Bar>
     )

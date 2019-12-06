@@ -149,7 +149,7 @@ const MaterialTabs: React.FC<Props> = ({
             style={indicatorStyle}
             color={indicatorColor}
             value={indicatorPosition}
-            tabWidth={!scrollable ? tabWidth : barWidth * 0.4}
+            tabWidth={!scrollable ? tabWidth : 'auto'}
           />
           <TabTrack barHeight={barHeight}>
             {items.map((item, idx) => (
@@ -163,7 +163,7 @@ const MaterialTabs: React.FC<Props> = ({
                 textStyle={textStyle}
                 activeTextStyle={selectedIndex === idx && activeTextStyle}
                 tabHeight={barHeight}
-                tabWidth={!scrollable ? tabWidth : barWidth * 0.4}
+                tabWidth={!scrollable ? tabWidth : 'auto'}
                 uppercase={uppercase}
                 inActiveTextColor={inactiveTextColor}
               />

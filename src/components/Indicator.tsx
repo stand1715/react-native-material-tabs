@@ -1,5 +1,5 @@
 import React from 'react';
-import { Animated } from 'react-native';
+import { Animated, Text } from 'react-native';
 import styled from 'styled-components/native';
 
 import constants from '../lib/constants';
@@ -30,7 +30,9 @@ const Indicator = ({ style = {}, ...props }: IndicatorProps) => (
     color={props.color}
     style={{ transform: [{ translateX: props.value }], ...style }}
     tabWidth={props.tabWidth}
-  />
+  >
+    <Text>on99</Text>
+  </Bar>
 );
 
 export default Indicator;

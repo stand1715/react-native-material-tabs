@@ -1,4 +1,6 @@
-<h2 align="center">React Native Material Tabs</h2>
+<h2 align="center">- ADDED INDICATOR STYLE PROPS</h2>
+
+<h2 align="center">FORK: React Native Material Tabs</h2>
 
 <p align="center">Material Design implementation of <a href="https://material.io/guidelines/components/tabs.html#tabs-types-of-tabs">Tabs</a>
 

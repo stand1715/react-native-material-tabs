@@ -37,6 +37,8 @@ interface TabsProps extends Pick<ScrollViewProps, 'keyboardShouldPersistTaps'> {
    */
   activeTextColor?: string;
 
+
+  indicatorStyle?: StyleProp<any>;
   /**
    * Color of the indicator
    *
@@ -88,4 +90,4 @@ interface TabsProps extends Pick<ScrollViewProps, 'keyboardShouldPersistTaps'> {
   onChange(index: number): void;
 }
 
-export default class MaterialTabs extends React.Component<TabsProps> {}
+export default class MaterialTabs extends React.Component<TabsProps> { }

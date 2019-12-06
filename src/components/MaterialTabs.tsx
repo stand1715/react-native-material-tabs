@@ -25,6 +25,7 @@ interface Props extends Pick<ScrollViewProps, 'keyboardShouldPersistTaps'> {
   indicatorColor: string;
   inactiveTextColor: string;
   scrollable: boolean;
+  indicatorStyle: StyleProp<any>;
   textStyle: StyleProp<TextStyle>;
   activeTextStyle: StyleProp<TextStyle>;
   items: ContentType[];
@@ -44,6 +45,7 @@ const MaterialTabs: React.FC<Props> = ({
   onChange,
   allowFontScaling,
   activeTextColor,
+  indicatorStyle,
   textStyle,
   activeTextStyle,
   inactiveTextColor,
@@ -88,7 +90,7 @@ const MaterialTabs: React.FC<Props> = ({
         indicatorPosition: indicator,
         scrollPosition: I18nManager.isRTL
           ? scrollValue * 0.25 +
-            scrollValue * (items.length - selectedIndex - 2)
+          scrollValue * (items.length - selectedIndex - 2)
           : scrollValue * 0.25 + scrollValue * (selectedIndex - 1),
       };
     };
@@ -163,6 +165,7 @@ const MaterialTabs: React.FC<Props> = ({
           </TabTrack>
 
           <Indicator
+            style={indicatorStyle}
             color={indicatorColor}
             value={indicatorPosition}
             tabWidth={!scrollable ? tabWidth : barWidth * 0.4}

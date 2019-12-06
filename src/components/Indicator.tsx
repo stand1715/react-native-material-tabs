@@ -3,6 +3,7 @@ import { Animated } from 'react-native';
 import styled from 'styled-components/native';
 
 import constants from '../lib/constants';
+import { TabText } from './Tab/styles';
 
 interface BarProps {
   tabWidth: number;
@@ -29,7 +30,9 @@ const Indicator = ({ style = {}, ...props }: IndicatorProps) => (
     color={props.color}
     style={{ transform: [{ translateX: props.value }], ...style }}
     tabWidth={props.tabWidth}
-  />
+  >
+    <TabText>on99</TabText>
+  </Bar>
 );
 
 export default Indicator;

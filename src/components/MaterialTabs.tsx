@@ -61,7 +61,7 @@ const MaterialTabs: React.FC<Props> = ({
 
   const getTabWidth = useCallback(
     (width: number = 0) => {
-      if (!scrollable) {
+      if (items && !scrollable) {
         setTabWidth(width / items.length);
       }
 
@@ -145,12 +145,12 @@ const MaterialTabs: React.FC<Props> = ({
           keyboardShouldPersistTaps={keyboardShouldPersistTaps}
           scrollEnabled={scrollable}
         >
-          {/* <Indicator
+          <Indicator
             style={indicatorStyle}
             color={indicatorColor}
             value={indicatorPosition}
             tabWidth={!scrollable ? tabWidth : barWidth * 0.4}
-          /> */}
+          />
           <TabTrack barHeight={barHeight}>
             {items.map((item, idx) => (
               <Tab

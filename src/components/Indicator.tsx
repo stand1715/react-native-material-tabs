@@ -26,12 +26,12 @@ interface IndicatorProps {
   value: Animated.Value;
 }
 
-const Indicator = ({ style = {}, ...props }: IndicatorProps) => props.hide ? (
+const Indicator = ({ style = {}, ...props }: IndicatorProps) => props.hide ? <View /> : (
   <Bar
     color={props.color}
     style={{ transform: [{ translateX: props.value }], ...style }}
     tabWidth={props.tabWidth}
   />
-) : <View />;
+);
 
 export default Indicator;

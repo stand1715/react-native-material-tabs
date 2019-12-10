@@ -152,6 +152,7 @@ const MaterialTabs: React.FC<Props> = ({
             color={indicatorColor}
             value={indicatorPosition}
             tabWidth={!scrollable ? tabWidth : barWidth * barWidthPercentage}
+            hide={selectedIndex < 0}
           />
           <TabTrack barHeight={barHeight}>
             {items.map((item, idx) => (

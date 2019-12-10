@@ -22,13 +22,14 @@ interface IndicatorProps {
   color: string;
   tabWidth: number;
   style: any;
+  hide: boolean;
   value: Animated.Value;
 }
 
 const Indicator = ({ style = {}, ...props }: IndicatorProps) => (
   <Bar
     color={props.color}
-    style={{ transform: [{ translateX: props.value }], ...style, opacity: props.value < 0 ? 0 : 1 }}
+    style={{ transform: [{ translateX: props.value }], ...style, opacity: props.hide ? 0 : 1 }}
     tabWidth={props.tabWidth}
   />
 );

@@ -15,21 +15,21 @@ height: ${constants.indicatorHeight};
 width: ${(props: BarProps) => props.tabWidth};
 position: absolute;
 bottom: 0;
-background-color: ${(props: BarProps) => 'transparent'};
+background-color: ${(props: BarProps) => props.color};
 `;
 
 interface IndicatorProps {
   color: string;
   tabWidth: number;
   style: any;
-  // hide: boolean;
+  hide: boolean;
   value: Animated.Value;
 }
 
 const Indicator = ({ style = {}, ...props }: IndicatorProps) => (
   <Bar
     color={props.color}
-    style={{ transform: [{ translateX: props.value }], ...style }}
+    style={{ transform: [{ translateX: props.value }], ...style, display: props.hide ? 'none' : 'unset' }}
     tabWidth={props.tabWidth}
   />
 );

@@ -15,7 +15,7 @@ height: ${constants.indicatorHeight};
 width: ${(props: BarProps) => props.tabWidth};
 position: absolute;
 bottom: 0;
-background-color: ${(props: BarProps) => props.color};
+background-color: ${(props: BarProps) => 'transparent'};
 `;
 
 interface IndicatorProps {
@@ -28,7 +28,7 @@ interface IndicatorProps {
 const Indicator = ({ style = {}, ...props }: IndicatorProps) => (
   <Bar
     color={props.color}
-    style={{ transform: [{ translateX: props.value }], ...style }}
+    style={{ transform: [{ translateX: props.value }], ...style, opacity: props.value < 0 ? 0 : 1 }}
     tabWidth={props.tabWidth}
   />
 );

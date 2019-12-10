@@ -22,7 +22,7 @@ interface IndicatorProps {
   color: string;
   tabWidth: number;
   style: any;
-  hide: boolean;
+  // hide: boolean;
   value: Animated.Value;
 }
 

@@ -28,7 +28,7 @@ interface IndicatorProps {
 const Indicator = ({ style = {}, ...props }: IndicatorProps) => (
   <Bar
     color={props.color}
-    style={{ transform: [{ translateX: props.value }], opacity: props.value < 0 ? 0 : 1, ...style }}
+    style={{ transform: [{ translateX: props.value }], ...style }}
     tabWidth={props.tabWidth}
   />
 );

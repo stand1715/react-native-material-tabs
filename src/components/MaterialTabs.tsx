@@ -42,6 +42,7 @@ const MaterialTabs: React.FC<Props> = ({
   scrollable,
   keyboardShouldPersistTaps,
   barHeight,
+  barWidthPercentage = 0.4,
   onChange,
   allowFontScaling,
   activeTextColor,
@@ -128,6 +129,7 @@ const MaterialTabs: React.FC<Props> = ({
     scrollable,
     selectedIndex,
     tabWidth,
+    barWidthPercentage
   ]);
 
   return (
@@ -149,7 +151,7 @@ const MaterialTabs: React.FC<Props> = ({
             style={indicatorStyle}
             color={indicatorColor}
             value={indicatorPosition}
-            tabWidth={!scrollable ? tabWidth : barWidth * 0.4}
+            tabWidth={!scrollable ? tabWidth : barWidth * barWidthPercentage}
           />
           <TabTrack barHeight={barHeight}>
             {items.map((item, idx) => (
@@ -163,7 +165,7 @@ const MaterialTabs: React.FC<Props> = ({
                 textStyle={textStyle}
                 activeTextStyle={selectedIndex === idx && activeTextStyle}
                 tabHeight={barHeight}
-                tabWidth={!scrollable ? tabWidth : barWidth * 0.4}
+                tabWidth={!scrollable ? tabWidth : barWidth * barWidthPercentage}
                 uppercase={uppercase}
                 inActiveTextColor={inactiveTextColor}
               />

@@ -30,6 +30,7 @@ interface TabsProps extends Pick<ScrollViewProps, 'keyboardShouldPersistTaps'> {
    */
   barHeight?: number;
 
+  barWidthPercentage?: number;
   /**
    * Color of the text for the selected tab
    *

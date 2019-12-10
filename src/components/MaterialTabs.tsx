@@ -74,7 +74,7 @@ const MaterialTabs: React.FC<Props> = ({
   useEffect(() => {
     const getAnimateValues = () => {
 
-      const scrollValue = !scrollable ? tabWidth : barWidth * 0.4;
+      const scrollValue = !scrollable ? tabWidth : barWidth * barWidthPercentage;
       const indicator = I18nManager.isRTL
         ? -selectedIndex * scrollValue
         : selectedIndex * scrollValue;

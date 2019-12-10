@@ -38,6 +38,7 @@ const getKeyForTab = (item: ContentType) =>
 
 const MaterialTabs: React.FC<Props> = ({
   items,
+  hide,
   selectedIndex,
   scrollable,
   keyboardShouldPersistTaps,
@@ -121,6 +122,7 @@ const MaterialTabs: React.FC<Props> = ({
     selectTab();
   }, [
     bar,
+    hide,
     barWidth,
     getTabWidth,
     indicatorPosition,
@@ -152,7 +154,7 @@ const MaterialTabs: React.FC<Props> = ({
             color={indicatorColor}
             value={indicatorPosition}
             tabWidth={!scrollable ? tabWidth : barWidth * barWidthPercentage}
-            hide={selectedIndex == null || selectedIndex < 0}
+            hide={hide}
           />
           <TabTrack barHeight={barHeight}>
             {items.map((item, idx) => (

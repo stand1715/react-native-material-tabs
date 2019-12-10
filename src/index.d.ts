@@ -22,6 +22,7 @@ interface TabsProps extends Pick<ScrollViewProps, 'keyboardShouldPersistTaps'> {
    * Default is #13897b
    */
   barColor?: string;
+  hide?: boolean;
 
   /**
    * Height of the tab bar

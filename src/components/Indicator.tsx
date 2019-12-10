@@ -1,5 +1,5 @@
 import React from 'react';
-import { Animated, Text } from 'react-native';
+import { Animated, Text, View } from 'react-native';
 import styled from 'styled-components/native';
 
 import constants from '../lib/constants';
@@ -26,12 +26,12 @@ interface IndicatorProps {
   value: Animated.Value;
 }
 
-const Indicator = ({ style = {}, ...props }: IndicatorProps) => (
+const Indicator = ({ style = {}, ...props }: IndicatorProps) => props.hide ? (
   <Bar
     color={props.color}
-    style={{ transform: [{ translateX: props.value }], ...style, ...(props.hide ? { display: 'none' } : {}) }}
+    style={{ transform: [{ translateX: props.value }], ...style }}
     tabWidth={props.tabWidth}
   />
-);
+) : <View />;
 
 export default Indicator;

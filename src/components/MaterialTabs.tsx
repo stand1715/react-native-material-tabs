@@ -54,6 +54,7 @@ const MaterialTabs: React.FC<Props> = ({
   uppercase,
   indicatorColor,
   barColor,
+  translateX
 }) => {
   const [tabWidth, setTabWidth] = useState(0);
   const [barWidth, setBarWidth] = useState(0);
@@ -152,7 +153,7 @@ const MaterialTabs: React.FC<Props> = ({
           <Indicator
             style={indicatorStyle}
             color={indicatorColor}
-            value={indicatorPosition}
+            value={translateX || 0}
             tabWidth={!scrollable ? tabWidth : barWidth * barWidthPercentage}
             hide={hide}
           />
